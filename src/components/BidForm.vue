@@ -1,29 +1,29 @@
 <template>
   <div class="form-container">
-    <p class="instruction"> Welcome to E-Bid! Begin by entering your name and amount.</p>
-    <div class="input-fields">
-      <div class="input-amount">
-        <md-field>
-          <label>Name</label>
-          <md-input v-model="name"></md-input>
-          <md-icon>person</md-icon>
-        </md-field>
-      </div>
-      <div class="input-amount">
-        <md-field>
-          <label>Amount</label>
-          <md-input v-model="amount" type="number"></md-input>
-          <md-icon>attach_money</md-icon>
-        </md-field>
-      </div>
-    </div>
-    <div class="lots-container">
-      <p class="instruction">Select a lot</p>
-    </div>
+    <p class="instruction"> Welcome to E-Bid! Begin by selecting a lot.</p>
     <div class="lot-buttons">
       <md-button class="md-raised lot-button" v-for="lot in lots" v-bind:class="{'md-primary': (lot === selectedLot)}" v-on:click="lotSelected(lot)">
         {{ lot }}
       </md-button>
+    </div>
+    <div class="lots-container">
+      <p class="instruction">Enter your name and amount</p>
+      <div class="input-fields">
+        <div class="input-amount">
+          <md-field>
+            <label>Name</label>
+            <md-input v-model="name"></md-input>
+            <md-icon>person</md-icon>
+          </md-field>
+        </div>
+        <div class="input-amount">
+          <md-field>
+            <label>Amount</label>
+            <md-input v-model="amount" type="number"></md-input>
+            <md-icon>attach_money</md-icon>
+          </md-field>
+        </div>
+      </div>
     </div>
     <md-content class="bid-card">
       <div class="bid-info-left">
@@ -118,7 +118,7 @@ export default {
 
   }
   .instruction {
-    margin-top: 65px;
+    margin-top: 50px;
     font-size: 22px;
     font-family: 'Yantramanav', sans-serif;
   }
@@ -140,6 +140,7 @@ export default {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    margin-bottom: 10px
   }
   .lot-button {
     margin-right: 30px;
