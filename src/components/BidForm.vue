@@ -148,7 +148,8 @@ export default {
     width: 450px;
     height: 250px;
     margin-top: 50px;
-    box-shadow: 1px 1px 4px 0px #888888;
+    box-shadow: 1px 1px 4px 0px #141414;
+    border-radius: 3px;
   }
   .bid-info-left {
     display: flex;
